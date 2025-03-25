@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新用户注册</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4; /* 添加背景颜色 */
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 1px solid #ccc; /* 添加边框 */
+            padding: 20px;
+            background-color: white; /* 容器背景设为白色，与背景色区分 */
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        .form-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .form-section label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-section input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-section button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .form-section button:hover {
+            background-color: #218838;
+        }
+
+        .success-message {
+            display: none;
+            color: green;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h2>用户注册</h2>
+            <form id="registerForm"> <label for="registerUsername">用户名</label>
+            <input type="text" id="registerUsername" placeholder="请输入用户名">
+            <label for="registerPassword">密码</label>
+            <input type="password" id="registerPassword" placeholder="请输入密码">
+            <label for="confirmPassword">确认密码</label>
+            <input type="password" id="confirmPassword" placeholder="请再次输入密码">
+            <button type="submit" onclick="register()">注册</button>
+            <button type="reset" onclick="resetRegisterForm()">重置</button>
+            <div id="registerSuccessMessage" class="success-message">注册成功！</div>
+            <div id="registerErrorMessage" class="error-message"></div>
+        </form>
+           
+        </div>
+    </div>
+    <!-- <script>
+        // function register() {
+        //     const username = document.getElementById('registerUsername').value;
+        //     const password = document.getElementById('registerPassword').value;
+        //     const confirmPassword = document.getElementById('confirmPassword').value;
+        //     if (username && password && confirmPassword) {
+        //         if (password === confirmPassword) {
+        //             document.getElementById('registerSuccessMessage').style.display = 'block';
+        //             // 这里可以添加跳转到其他页面的代码
+        //             window.location.href = 'D:/代码/电商用户/login.html';
+        //         } else {
+        //             alert('两次输入的密码不一致！');
+        //         }
+        //     } else {
+        //         alert('请填写所有字段！');
+        //     }
+        // }
+
+        // function resetRegisterForm() {
+        //     document.getElementById('registerUsername').value = '';
+        //     document.getElementById('registerPassword').value = '';
+        //     document.getElementById('confirmPassword').value = '';
+        //     document.getElementById('registerSuccessMessage').style.display = 'none';
+        // }
+ 
+    </script> -->
+    <script src="js\register.js"></script>
+</body>
+
+</html>

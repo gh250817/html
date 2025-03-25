@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>货到付款</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4; /* 添加背景颜色 */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc; /* 添加边框 */
+            padding: 20px;
+            background-color: white; /* 容器背景设为白色，与背景色区分 */
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            margin-bottom: 5px;
+        }
+
+        .details {
+            margin-top: 20px;
+        }
+
+        .details label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .details input,
+        .details select,
+        .details textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .details button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .details button:hover {
+            background-color: #218838;
+        }
+
+        .success-message {
+            display: none;
+            color: green;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 10px;
+            display: block;
+            margin: 0 auto 10px; /* 让图片居中对齐 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section">
+            <form id="paymentForm" onsubmit="event.preventDefault(); submitOrder();">
+                <img src="images\苹果.jpg" alt="商品图片">
+                <h2>货到付款</h2>
+                <ul>品行
+                    <li>商品名称：宜家超市</li>
+                    <li>地址：山东省济南市章丘区</li>
+                    <li>电话：0531-12345678</li>
+                    <li>网址：www.baidu.com</li>
+                    <li>Email：123456@qq.com</li>
+                </ul>
+
+                <div class="details">
+                    <h2>详细信息</h2>
+                    <label for="specification">规格：</label>
+                    <select id="specification">
+                        <option value="large">大果45元10斤</option>
+                        <option value="medium">中果25元5斤</option>
+                        <option value="small">小果15元3斤</option>
+                    </select>
+
+            <label for="model">数量：</label>
+            <input type="text" id="model" placeholder="请输入型号">
+
+            <label for="address">地址：</label>
+            <input type="text" id="address" placeholder="请输入地址">
+
+            <label for="phone">电话：</label>
+            <input type="text" id="phone" placeholder="请输入电话">
+
+            <label for="message">留言：</label>
+            <textarea id="message" placeholder="请输入留言"></textarea>
+
+            <button type="submit" onclick="submitOrder()">提交</button>
+            <div id="orderSuccessMessage" class="success-message">提交成功！</div>
+        </form>
+            
+        </div>
+    </div>
+
+    <!-- <script>
+        function submitOrder() {
+            const specification = document.getElementById('specification').value;
+            const model = document.getElementById('model').value;
+            const address = document.getElementById('address').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            if (specification && model && address && phone) {
+                document.getElementById('orderSuccessMessage').style.display = 'block';
+                // 这里可以添加跳转到其他页面的代码
+                window.location.href = 'D:/代码/电商用户/success.html';
+            } else {
+                alert('请填写所有必填字段！');
+            }
+        }
+    </script>
+  -->
+    <script src="js\cod.js"></script>
+</body>
+
+</html>
